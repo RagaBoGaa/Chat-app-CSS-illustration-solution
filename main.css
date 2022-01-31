@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Global Rules */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+.left {
+  color: var(--chat-left);
+}
+/* Variables */
+:root {
+  --sub-heading-top: hsl(276, 100%, 81%);
+  --chat-left: hsl(276, 55%, 52%);
+  --chat-right: hsl(271, 15%, 43%);
+  --placeholder-clr: hsl(206, 6%, 79%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+  --Linear-gra1: hsl(293, 100%, 63%);
+  --Linear-gra2: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --app-bg: hsl(270, 20%, 96%);
+  --submit-button-bg: hsl(271, 36%, 24%);
+  --radio-button-outline: hsl(289, 100%, 72%);
+}
+
+/* Container */
+.container {
+  min-height: 100vh;
+  max-width: 1420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10rem 25rem;
+  background-color: var(--app-bg);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Left Background */
+.container::before {
+  content: "";
+  position: absolute;
+  height: 105vh;
+  width: 37vw;
+  background-image: linear-gradient(
+    220deg,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  left: -166px;
+  top: 0;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* Right Background */
+.container::after {
+  content: "";
+  position: absolute;
+  height: 105vh;
+  width: 37vw;
+  background-image: linear-gradient(
+    180deg,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  opacity: 0.03;
+  right: -166px;
+  bottom: 0;
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Iphone Shape */
+.phone {
+  width: 25rem;
+  outline: 1rem solid var(--White);
+  border-radius: 2rem;
+  position: relative;
+  background-color: var(--app-bg);
+  margin-left: 4rem;
+  z-index: 10;
+  box-shadow: 20px 20px 40px 10px rgb(0 0 0 / 20%);
+}
+
+/* Header of App */
+.container .phone .head {
+  background-image: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 2rem 2rem 1rem;
+  line-height: 1.5;
+}
+
+/* Notch */
+.container .phone .head .notch {
+  background-color: var(--White);
+  width: 15rem;
+  height: 3rem;
+  position: absolute;
+  top: -1rem;
+  left: 20%;
+  border-radius: 1.5rem;
+}
+
+/* Left Arrow Shape */
+.container .phone .head::before {
+  content: "\2039";
+  position: absolute;
+  color: var(--White);
+  left: 1.5rem;
+  top: 3.5rem;
+}
+
+/* 3 Dots Shape */
+.container .phone .head::after {
+  content: "\2807";
+  position: absolute;
+  color: var(--White);
+  right: 1.5rem;
+  top: 3.5rem;
+}
+
+/* Avatar Picture */
+.container .phone .head .person__image {
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+/* Name & Status */
+.container .phone .head .person__name {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.container .phone .head .person__name p:first-child {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--White);
+}
+.container .phone .head .person__name p:nth-child(2) {
+  font-size: 0.9rem;
+  color: var(--sub-heading-top);
+}
+
+/* Chat Content */
+.container .phone .chat {
+  font-size: 1rem;
+  padding: 2rem 1rem;
+  padding: 1rem;
+}
+
+/* First Left 2 Chats */
+.container .phone .chat .left__chat p {
+  background-color: #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 67%;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* Right Chat */
+.container .phone .chat .right__chat {
+  padding: 1rem 0 1rem 7rem;
+  color: var(--chat-right);
+}
+.container .phone .chat .right__chat .pic__holder {
+  margin-bottom: 0.5rem;
+}
+.container .phone .chat .right__chat .pic__holder img {
+  width: 43px;
+  border-radius: 1rem;
+  margin: 0 0.4rem;
+}
+.container .phone .chat .right__chat p {
+  margin-bottom: 10px;
+  background-color: var(--White);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 10%);
+}
+
+/* To Make The Second P Fit-Content and Comes on Right */
+.container .phone .chat .right__chat .inset {
+  position: relative;
+  inset: auto 61px;
+  width: fit-content;
+}
+
+/* The Pricing on Left */
+.container .phone .chat .price > div {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  margin-bottom: 10px;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.3rem;
+  border-bottom-left-radius: 0.5rem;
+  position: relative;
+}
+.container .phone .chat .price .distance {
+  margin: 0 0 0 20px;
+  display: inline-block;
+  color: var(--app-bg);
+}
+
+/* The shape of radiobutton circle */
+.container .phone .chat .price .distance::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  outline: 2px solid var(--radio-button-outline);
+  left: 1rem;
+}
+.container .phone .chat .price .cost {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--White);
+}
+.container .phone .chat .foot {
+  position: relative;
+}
+
+/* Styling the input with type text */
+.container .phone .chat .foot input {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4rem;
+  position: relative;
+}
+
+/* Coloring Placeholder */
+.container .phone .chat .foot input::placeholder {
+  color: var(--placeholder-clr);
+}
+
+/* Making Right Arrow Shape */
+.container .phone .chat .foot::after {
+  content: "\203A";
+  position: absolute;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--submit-button-bg);
+  color: var(--White);
+  right: 5px;
+  bottom: 4px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.75rem;
+}
+
+/* Styling Main Heading & Main Paragraph */
+.container .info {
+  flex-basis: 54%;
+  line-height: 1.6;
+}
+.container .info .title {
+  color: var(--main-heading);
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+.container .info > p {
+  color: var(--paragraph);
+}
+
+/* Footer */
+footer {
+  margin: 0 auto;
+}
+.attribution {
+  font-size: 10px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Linear-gra1);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Media for Small Screen */
+@media (max-width: 776px) {
+  .container {
+    padding: 5rem 2rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .info {
+    margin-top: 7rem;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  .container::before {
+    content: "";
+    position: absolute;
+    height: 90vh;
+    width: 50vw;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 85vh;
+    width: 50vw;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .phone {
+    margin: 0;
+  }
+  .container .info .title {
+    margin-bottom: 1.5rem;
+  }
+}
