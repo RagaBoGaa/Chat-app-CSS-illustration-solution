@@ -294,6 +294,7 @@ body {
 .container .info {
   flex-basis: 54%;
   line-height: 1.6;
+  z-index: 5;
 }
 .container .info .title {
   color: var(--main-heading);
