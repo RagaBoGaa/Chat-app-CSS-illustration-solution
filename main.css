@@ -294,7 +294,6 @@ body {
 .container .info {
   flex-basis: 54%;
   line-height: 1.6;
-  z-index: 5;
 }
 .container .info .title {
   color: var(--main-heading);
@@ -331,6 +330,8 @@ footer {
     margin-top: 7rem;
     text-align: center;
     padding-bottom: 5rem;
+      z-index: 5;
+
   }
   .container::before {
     content: "";
