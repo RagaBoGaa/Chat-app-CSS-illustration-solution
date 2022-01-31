@@ -44,7 +44,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 10rem 25rem;
-  background-color: var(--app-bg);
   margin: 0 auto;
   position: relative;
 }
@@ -238,7 +237,7 @@ body {
   color: var(--app-bg);
 }
 
-/* The shape of radiobutton circle */
+/* The shape of radio button circle */
 .container .phone .chat .price .distance::before {
   content: "";
   position: absolute;
